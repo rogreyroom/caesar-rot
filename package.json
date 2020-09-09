@@ -1,0 +1,32 @@
+{
+	"name": "caesar-rot",
+	"description": "The app creates string encoded with Caesar cipher. Practising typescript and Jest.",
+	"version": "1.0.0",
+	"main": "src/app/index.ts",
+	"private": true,
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/rogreyroom/caesar-rot.git"
+	},
+	"scripts": {
+		"dev": "",
+		"start": "yarn dev",
+		"unit": "",
+		"test": "yarn unit",
+		"lint": "",
+		"build": "",
+		"deploy": ""
+	},
+	"author": {
+		"name": "Robert Adamczewski",
+		"email": "robert@adamczewski.me",
+		"url": "https://adamczewski.me"
+	},
+	"keywords": [
+		"typescript",
+		"jest",
+		"parcel",
+		"caesar cipher"
+	],
+	"license": "MIT"
+}
