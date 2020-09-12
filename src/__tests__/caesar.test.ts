@@ -1,4 +1,10 @@
-import { convertToString, isEmpty, isAlphanumeric, isUpperCase } from '../app/modules/caesar'
+import {
+  convertToString,
+  isEmpty,
+  isAlphanumeric,
+  isUpperCase,
+  isOverArrayLength,
+} from '../app/modules/caesar'
 
 describe('Caesar13: create a caesar13 cipher code from the given value.', () => {
   describe('change given input to the string', () => {
@@ -73,5 +79,29 @@ describe('check if the given argument is an upper case', () => {
   test('is not the "#" string upper case', () => {
     const input = '1'
     expect(isUpperCase(input)).toBe(false)
+  })
+})
+
+describe('check if given index is bigger then array length', () => {
+  const arrayLength = 26
+  test('is index = 30 over array length with ROT13', () => {
+    const indexValue = 30
+    const rot = 13
+    expect(isOverArrayLength(indexValue, arrayLength, rot)).toBe(true)
+  })
+  test('is index = 27 over array length with ROT13', () => {
+    const indexValue = 27
+    const rot = 13
+    expect(isOverArrayLength(indexValue, arrayLength, rot)).toBe(true)
+  })
+  test('is not index = 1 over array length  with ROT13', () => {
+    const indexValue = 1
+    const rot = 13
+    expect(isOverArrayLength(indexValue, arrayLength, rot)).toBe(false)
+  })
+  test('is not index = 12 over array length with ROT13', () => {
+    const indexValue = 12
+    const rot = 13
+    expect(isOverArrayLength(indexValue, arrayLength, rot)).toBe(false)
   })
 })

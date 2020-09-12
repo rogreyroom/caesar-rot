@@ -13,3 +13,11 @@ export const isAlphanumeric = (input: string): boolean => {
 export const isUpperCase = (input: string): boolean => {
   return input.match(/[0-9]/gi) === null && input === input.toUpperCase() ? true : false
 }
+
+export const isOverArrayLength = (
+  indexValue: number,
+  arrayLength: number,
+  rot: number,
+): boolean => {
+  return indexValue + rot > arrayLength - 1 ? true : false
+}
