@@ -21,3 +21,9 @@ export const isOverArrayLength = (
 ): boolean => {
   return indexValue + rot > arrayLength - 1 ? true : false
 }
+
+export const shiftIndexValue = (index: number, rot: number, arrayLength: number): number => {
+  if (isOverArrayLength(index, arrayLength, rot)) return rot - (arrayLength - index)
+
+  return index + rot
+}
