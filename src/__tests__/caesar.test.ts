@@ -1,6 +1,24 @@
 import { caesarRot } from '../app/modules/caesar'
 
 describe('Caesar ROT: create a caesar ROT cipher code from the given value.', () => {
+  describe('check if input value is empty then send error message', () => {
+    test('is empty', () => {
+      const value = ''
+      const rot = 13
+      expect(() => {
+        caesarRot(value, rot)
+      }).toThrowError(new Error('Given string is empty!'))
+    })
+  })
+
+  describe('check if input is not alphanumeric then return the input', () => {
+    test('is not alphanumeric', () => {
+      const value = '!'
+      const rot = 13
+      expect(caesarRot(value, rot)).toBe('!')
+    })
+  })
+
   describe('check if the given string was ciphered by the ROT', () => {
     test('change string "a" to "n" with the use of ROT13', () => {
       const value = 'a'

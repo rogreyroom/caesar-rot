@@ -11,7 +11,7 @@ export const caesarRot = (value: string, rot: number): string => {
   if (isEmpty(value)) throw new Error('Given string is empty!')
 
   valueArray.forEach((char) => {
-    if (!isAlphanumeric) return (resultString = resultString.concat(char))
+    if (!isAlphanumeric(char)) return (resultString = resultString.concat(char))
 
     const valueIndex: number = alphabet.indexOf(char.toLowerCase())
     const newValueIndex: number = shiftIndexValue(valueIndex, rot, alphabet.length)
