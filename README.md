@@ -38,9 +38,9 @@ The output of the app is a encoded string with the given ROT value.
 
 ## Build with
 
-* [parcel](https://parceljs.org/)
+* [webpack](https://webpack.js.org)
 * [typescript](https://typescriptlang.org)
-* [jest](https://jestjs.io/)
+* [jest](https://jestjs.io)
 
 ## Version
 
@@ -52,4 +52,4 @@ Robert Adamczewski
 
 ## License
 
-This project is licensed under MIT License - see the [LICENSE.md](./LICENSE) file for details.
+This project is licensed under MIT License - see the [LICENSE](./LICENSE) file for details.
