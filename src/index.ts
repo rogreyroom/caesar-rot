@@ -1,3 +1,7 @@
-import { greet } from './app'
+import 'normalize.css'
+import './scss/style.scss'
 
-document.write(greet())
+const message = 'The main index.ts'
+
+document.write(message)
+console.log(message)
