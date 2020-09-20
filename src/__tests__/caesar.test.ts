@@ -19,6 +19,14 @@ describe('Caesar ROT: create a caesar ROT cipher code from the given value.', ()
     })
   })
 
+  describe('check if input is given char is upper case then return the new shifted char as upper case', () => {
+    test('is uppercase', () => {
+      const value = 'A'
+      const rot = 13
+      expect(caesarRot(value, rot)).toBe('N')
+    })
+  })
+
   describe('check if the given string was ciphered by the ROT', () => {
     test('change string "a" to "n" with the use of ROT13', () => {
       const value = 'a'
