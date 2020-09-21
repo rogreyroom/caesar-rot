@@ -1,7 +1,8 @@
 import { generateOptions } from './modules/generateOptions'
 import { caesarRot } from './modules/caesar'
+import { adjustTheBottomImageWidth } from './modules/svgBackground'
 
-export { generateOptions }
+export { generateOptions, adjustTheBottomImageWidth }
 
 export const clearTextFields = ([...textFields]): void => {
   console.log(textFields)

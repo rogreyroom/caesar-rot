@@ -1,11 +1,8 @@
 import 'normalize.css'
 import './scss/style.scss'
+import { bottomBg, bodyTarget, rotSelect, inputText, outputText } from './app/modules/htmlSelectors'
 import * as app from './app'
 
-const bodyTarget = document.querySelector<HTMLBodyElement>('.body--js')!
-const rotSelect = document.querySelector<HTMLSelectElement>('.rot-select--js')!
-const inputText = document.querySelector<HTMLInputElement>('.input-text--js')!
-const outputText = document.querySelector<HTMLParagraphElement>('.output-text--js')!
 const targetElements: {
   rot: HTMLSelectElement
   input: HTMLInputElement
@@ -16,6 +13,7 @@ const targetElements: {
   output: outputText,
 }
 
+app.adjustTheBottomImageWidth(bottomBg)
 app.generateOptions(rotSelect)
 
 inputText.addEventListener('click', (): void => {
