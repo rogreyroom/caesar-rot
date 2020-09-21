@@ -1,12 +1,8 @@
 import 'normalize.css'
 import './scss/style.scss'
+import { bottomBg, bodyTarget, rotSelect, inputText, outputText } from './app/modules/htmlSelectors'
 import * as app from './app'
 
-const bottomBg = document.querySelector<HTMLElement>('.bottom-bg--js')!
-const bodyTarget = document.querySelector<HTMLBodyElement>('.body--js')!
-const rotSelect = document.querySelector<HTMLSelectElement>('.rot-select--js')!
-const inputText = document.querySelector<HTMLInputElement>('.input-text--js')!
-const outputText = document.querySelector<HTMLParagraphElement>('.output-text--js')!
 const targetElements: {
   rot: HTMLSelectElement
   input: HTMLInputElement
