@@ -5,7 +5,6 @@ import { adjustTheBottomImageWidth } from './modules/svgBackground'
 export { generateOptions, adjustTheBottomImageWidth }
 
 export const clearTextFields = ([...textFields]): void => {
-  console.log(textFields)
   textFields.forEach((el: HTMLSelectElement) => {
     if (el.hasAttribute('type')) {
       el.value = ''
