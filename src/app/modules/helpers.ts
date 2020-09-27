@@ -10,6 +10,10 @@ export const isAlphanumeric = (input: string): boolean => {
   return input.match(/[a-z]|[A-Z]|[0-9]/gi) !== null ? true : false
 }
 
+export const isNumeric = (input: string): boolean => {
+  return input.match(/[0-9]/gi) !== null ? true : false
+}
+
 export const isUpperCase = (input: string): boolean => {
   return input.match(/[0-9]/gi) === null && input === input.toUpperCase() ? true : false
 }

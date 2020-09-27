@@ -2,6 +2,7 @@ import {
   convertToString,
   isEmpty,
   isAlphanumeric,
+  isNumeric,
   isUpperCase,
   isOverArrayLength,
   shiftIndexValue,
@@ -56,6 +57,29 @@ describe('Caesar ROT: create a caesar ROT cipher code from the given value. Help
     test('is not "}" an alphanumeric', () => {
       const input = '}'
       expect(isAlphanumeric(input)).toBe(false)
+    })
+  })
+
+  describe('check if the given input string is numeric', () => {
+    test('is the "a" string numeric', () => {
+      const input = 'a'
+      expect(isNumeric(input)).toBe(false)
+    })
+    test('is the "B" string numeric', () => {
+      const input = 'B'
+      expect(isNumeric(input)).toBe(false)
+    })
+    test('is the "$" string numeric', () => {
+      const input = '$'
+      expect(isNumeric(input)).toBe(false)
+    })
+    test('is not "1" an numeric', () => {
+      const input = '1'
+      expect(isNumeric(input)).toBe(true)
+    })
+    test('is not "9" an numeric', () => {
+      const input = '9'
+      expect(isNumeric(input)).toBe(true)
     })
   })
 

@@ -1,4 +1,11 @@
-import { convertToString, isEmpty, isAlphanumeric, shiftIndexValue, isUpperCase } from './helpers'
+import {
+  convertToString,
+  isEmpty,
+  isAlphanumeric,
+  shiftIndexValue,
+  isUpperCase,
+  isNumeric,
+} from './helpers'
 import { generateAlphabet } from './generateAlphabet'
 
 const alphabet: string[] = generateAlphabet()
@@ -11,7 +18,7 @@ export const caesarRot = (value: string, rot: number): string => {
   if (isEmpty(value)) throw new Error('Given string is empty!')
 
   valueArray.forEach((char) => {
-    if (!isAlphanumeric(char)) return (resultString = resultString.concat(char))
+    if (!isAlphanumeric(char) || isNumeric(char)) return (resultString = resultString.concat(char))
 
     const valueIndex: number = alphabet.indexOf(char.toLowerCase())
     const newValueIndex: number = shiftIndexValue(valueIndex, rot, alphabet.length)
