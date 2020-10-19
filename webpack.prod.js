@@ -12,7 +12,7 @@ module.exports = merge(common, {
   mode: 'production',
   output: {
     filename: '[name].[contentHash].bundle.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'public'),
   },
   optimization: {
     minimizer: [
@@ -37,6 +37,10 @@ module.exports = merge(common, {
       {
         test: /\.s(a|c)ss$/,
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+      },
+      {
+        test: /\.css$/,
+        use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
     ],
   },

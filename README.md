@@ -27,9 +27,6 @@ The output of the app is a encoded string with the given ROT value.
 * build
 ```npm run build or yarn build```
 
-* deploy
-```npm run deploy or yarn deploy```
-
 ## Installation
 
     ```
